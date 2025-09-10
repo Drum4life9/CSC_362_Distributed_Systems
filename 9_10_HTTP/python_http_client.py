@@ -1,6 +1,6 @@
 import http.client
 
-PORT = 8001
+PORT = 8000
 addr = "0.0.0.0"
 
 if __name__ == '__main__':
