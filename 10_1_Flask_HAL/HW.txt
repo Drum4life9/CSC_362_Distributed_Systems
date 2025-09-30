@@ -1,0 +1,20 @@
+1) Disk:
+Links:
+    * Self (GET from /games/<game_id>)
+    * See which users have this in their queue (GET from /queue?game_id=<game_id>)
+    * (If we have a logged in user) add this game to their personal queue
+        (POST to /queue/<logged_in_user_id>)
+
+2) User:
+Links:
+    * Self (GET from /users/<user_id>)
+Embedded:
+    * Get a link to their queue (GET, PUT, POST to /queue/<user_id>)
+    * See payment information (/payment/<user_id>)
+
+3) A User's Queue:
+Links:
+    * Self (GET from /queue/<user_id>)
+Embedded:
+    * the user object associated with this queue
+        {user_data, self link, etc.}
